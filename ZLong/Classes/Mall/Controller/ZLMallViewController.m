@@ -149,13 +149,21 @@ static NSString *const DCLifeHeadViewID = @"DCLifeHeadView";
     [ZLNetwork POSTWithURL:API_HOME parameters:nil callback:^(ZLResponse *responseObject, NSError *error, BOOL isFromCache) {
         [weakSelf.collectionView.mj_header endRefreshing];
 
-        ZLHomeModel *homeData = [ZLHomeModel mj_objectWithKeyValues:responseObject.list];
-        weakSelf.commodityArray = @[homeData.lqCommoditys,homeData.xinCommoditys,homeData.zlCommoditys,homeData.ttCommoditys];
-        weakSelf.lunPicArray = homeData.carouselList;
-        weakSelf.singleImage = homeData.ImgStatic;
-        weakSelf.hotArray = homeData.hotCommoditys;
-        weakSelf.listNewsArray = homeData.listNewS;
-        [weakSelf.collectionView reloadData];
+        if (!responseObject.success && !responseObject) {
+            //数据请求失败
+            return ;
+        }
+        if (responseObject.s == ZLStatusCodeSuccess) {
+            ZLHomeModel *homeData = [ZLHomeModel mj_objectWithKeyValues:responseObject.list];
+            weakSelf.commodityArray = @[homeData.lqCommoditys,homeData.xinCommoditys,homeData.zlCommoditys,homeData.ttCommoditys];
+            weakSelf.lunPicArray = homeData.carouselList;
+            weakSelf.singleImage = homeData.ImgStatic;
+            weakSelf.hotArray = homeData.hotCommoditys;
+            weakSelf.listNewsArray = homeData.listNewS;
+            [weakSelf.collectionView reloadData];
+
+        }
+
     }];
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ //手动延迟
 //    });
