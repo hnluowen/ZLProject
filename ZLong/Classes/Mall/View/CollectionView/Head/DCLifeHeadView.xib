@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DCLifeHeadView" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffoe" translatesAutoresizingMaskIntoConstraints="NO" id="RHc-zQ-UXA">
+                    <rect key="frame" x="115" y="9" width="17" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="2EY-Rt-RXU"/>
+                        <constraint firstAttribute="width" constant="17" id="t1S-w9-Kgj"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="GW8-nz-TRR">
+                    <rect key="frame" x="70" y="17" width="180" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="4kx-HD-hgJ"/>
+                        <constraint firstAttribute="width" constant="180" id="Osn-FG-41V"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生活服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WM-HN-RkP">
+                    <rect key="frame" x="139" y="10.5" width="73" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="73" id="kob-Kb-lwG"/>
+                        <constraint firstAttribute="height" constant="17" id="pzX-N7-nkP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.015686274509803921" green="0.015686274509803921" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7WM-HN-RkP" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" constant="1.5" id="6tk-UH-osW"/>
+                <constraint firstItem="GW8-nz-TRR" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="AJY-tv-KTj"/>
+                <constraint firstItem="GW8-nz-TRR" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="EUr-11-ue4"/>
+                <constraint firstItem="GW8-nz-TRR" firstAttribute="leading" secondItem="RHc-zQ-UXA" secondAttribute="trailing" constant="-62" id="Km4-gO-35E"/>
+                <constraint firstItem="RHc-zQ-UXA" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="pSS-wX-eft"/>
+                <constraint firstItem="7WM-HN-RkP" firstAttribute="leading" secondItem="GW8-nz-TRR" secondAttribute="trailing" constant="-111" id="z6Z-BW-f6i"/>
+            </constraints>
+            <point key="canvasLocation" x="40" y="115.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="Line" width="180" height="2"/>
+        <image name="coffoe" width="17" height="17"/>
+    </resources>
+</document>

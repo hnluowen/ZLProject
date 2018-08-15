@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>iconImage</key>
+		<string>WechatIMG28</string>
+		<key>gridTitle</key>
+		<string>酒店</string>
+		<key>gridTag</key>
+		<string></string>
+		<key>gridColor</key>
+		<string></string>
+		<key>jumpURL</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>iconImage</key>
+		<string>WechatIMG29</string>
+		<key>gridTitle</key>
+		<string>快递</string>
+		<key>gridTag</key>
+		<string></string>
+		<key>gridColor</key>
+		<string></string>
+		<key>jumpURL</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>iconImage</key>
+		<string>WechatIMG30</string>
+		<key>gridTitle</key>
+		<string>票务</string>
+		<key>gridTag</key>
+		<string></string>
+		<key>gridColor</key>
+		<string></string>
+		<key>jumpURL</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>iconImage</key>
+		<string>WechatIMG31</string>
+		<key>gridTitle</key>
+		<string>充值</string>
+		<key>gridTag</key>
+		<string></string>
+		<key>gridColor</key>
+		<string></string>
+		<key>jumpURL</key>
+		<string></string>
+	</dict>
+</array>
+</plist>
