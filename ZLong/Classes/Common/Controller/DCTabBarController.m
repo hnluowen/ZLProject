@@ -167,15 +167,15 @@
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
 
 
-//    if(viewController == [tabBarController.viewControllers objectAtIndex:DCTabBarControllerUser] || viewController == [tabBarController.viewControllers objectAtIndex:DCTabBarControllerBonus]){
-//
-//        if (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) {
-//            ZLLoginViewController *dcLoginVc = [[ZLLoginViewController alloc] init];
-//
-//            [self presentViewController:dcLoginVc animated:YES completion:nil];
-//            return NO;
-//        }
-//    }
+    if(viewController == [tabBarController.viewControllers objectAtIndex:DCTabBarControllerUser] || viewController == [tabBarController.viewControllers objectAtIndex:DCTabBarControllerBonus]){
+
+        if (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) {
+            ZLLoginViewController *dcLoginVc = [[ZLLoginViewController alloc] init];
+
+            [self presentViewController:dcLoginVc animated:YES completion:nil];
+            return NO;
+        }
+    }
     return YES;
 }
 

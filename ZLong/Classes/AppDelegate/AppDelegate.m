@@ -24,14 +24,15 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-
+    [DCUserInfo clearLoginCookie];
+    [DCUserInfo readLoginCookie];
     [self setUpRootVC]; //跟控制器判断
     [self setUpFixiOS11]; //适配iOS11
     [self.window makeKeyAndVisible];
-
+    [ZLAPITest testAPIUser];
 //    [ZLAPITest testAPILogin];
 //    [ZLAPITest testAPIBonus];
-    [ZLAPITest testAPIHome];
+//    [ZLAPITest testAPIHome];
 //    NSString *path = NSHomeDirectory();//主目录
 //    NSLog(@"NSHomeDirectory:%@",path);
 //    NSString *userName = NSUserName();//与上面相同

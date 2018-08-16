@@ -8,6 +8,10 @@
 
 #import "ZLLoginViewController.h"
 #import "ZLRegisterViewController.h"
+#import "ZLMallViewController.h"
+#import "ZLNearbyViewController.h"
+#import "ZLIMViewController.h"
+#import "ZLBonusViewController.h"
 @interface ZLLoginViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *verifyBtn;
 @property (weak, nonatomic) IBOutlet UILabel *verifyLabel;
@@ -141,8 +145,12 @@
         
         if (responseObject.s == ZLStatusCodeSuccess) {
             [MBProgressHUD showSuccess:responseObject.msg];
-            [DCObjManager dc_saveUserData:@"1" forKey:@"isLogin"]; //1代表登录
-            [DCObjManager dc_saveUserData:self.userNameField.text forKey:@"UserName"]; //记录用户名
+            [DCUserInfo saveLoginCookie]; //保存cookie
+            [self dismissViewControllerAnimated:YES completion:^{
+                if ([@[[ZLIMViewController class],[ZLMallViewController class],[ZLNearbyViewController class],[ZLBonusViewController class]] containsObject:[[DCSpeedy dc_getCurrentVC] class]]) { //过滤
+                    [[NSNotificationCenter defaultCenter]postNotificationName:@"LOGINSELECTCENTERINDEX" object:nil];
+                }
+            }];
         } else {
             [MBProgressHUD showError:responseObject.msg];
         }

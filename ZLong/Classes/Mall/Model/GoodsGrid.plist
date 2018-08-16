@@ -12,7 +12,7 @@
 		<key>gridColor</key>
 		<string></string>
 		<key>jumpURL</key>
-		<string></string>
+		<string>/vip</string>
 	</dict>
 	<dict>
 		<key>iconImage</key>
@@ -24,7 +24,7 @@
 		<key>gridColor</key>
 		<string></string>
 		<key>jumpURL</key>
-		<string></string>
+		<string>/getCode</string>
 	</dict>
 	<dict>
 		<key>iconImage</key>
@@ -36,7 +36,7 @@
 		<key>gridColor</key>
 		<string></string>
 		<key>jumpURL</key>
-		<string></string>
+		<string>/second/goLxArea</string>
 	</dict>
 	<dict>
 		<key>iconImage</key>
@@ -58,9 +58,9 @@
 		<key>gridTag</key>
 		<string></string>
 		<key>gridColor</key>
-		<string>#A48A56</string>
-		<key>jumpURL</key>
 		<string></string>
+		<key>jumpURL</key>
+		<string>/showInviteFriend</string>
 	</dict>
 	<dict>
 		<key>iconImage</key>
@@ -72,7 +72,7 @@
 		<key>gridColor</key>
 		<string></string>
 		<key>jumpURL</key>
-		<string></string>
+		<string>/sign/signGo</string>
 	</dict>
 	<dict>
 		<key>iconImage</key>
@@ -96,7 +96,7 @@
 		<key>gridColor</key>
 		<string></string>
 		<key>jumpURL</key>
-		<string></string>
+		<string>/toClassifyMain</string>
 	</dict>
 </array>
 </plist>

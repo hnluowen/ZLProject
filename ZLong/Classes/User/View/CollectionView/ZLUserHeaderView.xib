@@ -28,6 +28,9 @@
                         <constraint firstAttribute="height" constant="22" id="wa9-9f-eC3"/>
                     </constraints>
                     <state key="normal" image="p_vip"/>
+                    <connections>
+                        <action selector="clickEdit:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="twU-ec-JTf"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUy-TP-ycV">
                     <rect key="frame" x="263" y="115" width="45" height="14"/>
@@ -48,6 +51,9 @@
                                     <state key="normal" image="p_6copy">
                                         <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clickGoShopCar:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Wkv-mc-XZs"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购物车" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBX-mQ-Bcb">
                                     <rect key="frame" x="24" y="54" width="40" height="16"/>
@@ -75,6 +81,9 @@
                                     <state key="normal" image="p_5copy">
                                         <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clickOrder:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="LfD-ZF-KKi"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6R-5L-x37">
                                     <rect key="frame" x="30" y="54" width="27" height="16"/>
@@ -101,6 +110,9 @@
                                     <state key="normal" image="p_8copy">
                                         <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clickCollection:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="GSb-G3-6ri"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收藏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmS-Am-kfQ">
                                     <rect key="frame" x="31" y="54" width="27" height="16"/>
@@ -127,6 +139,9 @@
                                     <state key="normal" image="p_7copy">
                                         <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clickCarBag:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="oRv-89-O3S"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卡包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5m-TP-XC8">
                                     <rect key="frame" x="30" y="54" width="27" height="16"/>
@@ -164,13 +179,12 @@
                         <constraint firstAttribute="bottom" secondItem="v7E-v6-Ldy" secondAttribute="bottom" id="ujc-6o-MRh"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orb-sa-TrX">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orb-sa-TrX">
                     <rect key="frame" x="158" y="69" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="ILo-iw-euB"/>
                         <constraint firstAttribute="height" constant="60" id="y9V-k0-RvG"/>
                     </constraints>
-                    <state key="normal" image="p_2"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="悠然自得" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT1-Uk-U4B">
                     <rect key="frame" x="152" y="136" width="70" height="21"/>
@@ -205,6 +219,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="升级VIP会员"/>
+                    <connections>
+                        <action selector="clickUpVip:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="PmC-TF-Hk1"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPg-k7-a3q">
                     <rect key="frame" x="279" y="192" width="86" height="14"/>
@@ -213,7 +230,17 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="升级中龙合伙人"/>
+                    <connections>
+                        <action selector="clickUpParter:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="yxH-In-LhI"/>
+                    </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p_2" translatesAutoresizingMaskIntoConstraints="NO" id="GSt-Ln-5yl">
+                    <rect key="frame" x="157.5" y="69" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="u0R-xf-zk3"/>
+                        <constraint firstAttribute="height" constant="60" id="zn9-JO-Lio"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -234,7 +261,9 @@
                 <constraint firstItem="ifh-gm-mdd" firstAttribute="top" secondItem="TPg-k7-a3q" secondAttribute="bottom" constant="15" id="dPy-ZU-Mhd"/>
                 <constraint firstItem="m3c-7B-5Eo" firstAttribute="centerY" secondItem="orb-sa-TrX" secondAttribute="centerY" id="dek-4N-cwh"/>
                 <constraint firstItem="ifh-gm-mdd" firstAttribute="top" secondItem="io3-NF-gp9" secondAttribute="bottom" constant="15" id="f6z-Es-ww6"/>
+                <constraint firstItem="GSt-Ln-5yl" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="fq4-z5-Zcd"/>
                 <constraint firstItem="io3-NF-gp9" firstAttribute="leading" secondItem="ifh-gm-mdd" secondAttribute="leading" id="gb8-sn-yaw"/>
+                <constraint firstItem="GSt-Ln-5yl" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="69" id="kGV-43-eag"/>
                 <constraint firstItem="orb-sa-TrX" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="lXx-Vf-WjB"/>
                 <constraint firstItem="Eh5-le-GrP" firstAttribute="centerY" secondItem="orb-sa-TrX" secondAttribute="centerY" id="lgp-4g-bWh"/>
                 <constraint firstItem="cUy-TP-ycV" firstAttribute="centerX" secondItem="m3c-7B-5Eo" secondAttribute="centerX" id="uQd-PC-jpD"/>
@@ -244,7 +273,15 @@
                 <constraint firstItem="cUy-TP-ycV" firstAttribute="top" secondItem="m3c-7B-5Eo" secondAttribute="bottom" constant="5" id="yqB-Ho-ce2"/>
             </constraints>
             <connections>
+                <outlet property="carBagButton" destination="2Uv-hM-2pM" id="cj0-dT-VYC"/>
+                <outlet property="collectionButton" destination="pN9-j0-kna" id="SlU-qe-Hh8"/>
                 <outlet property="headBgView" destination="ifh-gm-mdd" id="w5I-o5-0q1"/>
+                <outlet property="headImageView" destination="GSt-Ln-5yl" id="Qo1-E7-pq9"/>
+                <outlet property="isVipLabel" destination="b2D-ct-Cdi" id="w2y-hc-6qj"/>
+                <outlet property="loginNameLabel" destination="Ozu-MQ-1Ou" id="jzN-fJ-odA"/>
+                <outlet property="nickLabel" destination="yT1-Uk-U4B" id="Hnk-np-iAs"/>
+                <outlet property="orderButton" destination="Hcf-aC-C2v" id="nig-JP-May"/>
+                <outlet property="shopCarButton" destination="G84-mz-Gal" id="K6p-J5-B7J"/>
             </connections>
             <point key="canvasLocation" x="39.5" y="115.5"/>
         </collectionReusableView>

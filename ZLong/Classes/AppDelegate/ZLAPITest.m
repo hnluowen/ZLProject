@@ -35,7 +35,26 @@
 }
 
 +(void)testAPIUser {
-    
+    NSDictionary *params = @{
+                             @"phone":@"17671728582",
+                             @"password":@"123456"
+                             };
+    [ZLNetwork POSTWithURL:API_LOGIN parameters:params callback:^(ZLResponse *responseObject, NSError *error, BOOL isFromCache) {
+        if (!responseObject.success) {
+            return ;
+        } //失败
+        
+        if (responseObject.s == ZLStatusCodeSuccess) {
+            
+            [ZLNetwork POSTWithURL:API_UserCenter parameters:nil callback:^(ZLResponse *responseObject, NSError *error, BOOL isFromCache) {
+                
+            }];
+
+        } else {
+        }
+    }];
+
+
 }
 
 + (void)testAPIBonus {

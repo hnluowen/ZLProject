@@ -12,12 +12,14 @@
 #import "DCGoodsGridCell.h"
 #import "ZLCouponCell.h"
 #import "DCGridItem.h"
-
+#import "ZLUserHome.h"
 @interface ZLUserViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 /* collectionView */
 @property (strong , nonatomic)UICollectionView *collectionView;
 /* 8图标属性 */
 @property (strong , nonatomic)NSMutableArray<DCGridItem *> *gridItem;
+
+@property (strong , nonatomic)ZLUserHome *userHome;
 
 @end
 
@@ -38,6 +40,8 @@ static NSString *const ZLCouponCellID = @"ZLCouponCell";
 - (void)setUpGIFRrfresh
 {
     self.collectionView.mj_header = [DCHomeRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(setUpRecData)];
+    [self.collectionView.mj_header beginRefreshing];
+
 }
 
 
@@ -46,9 +50,24 @@ static NSString *const ZLCouponCellID = @"ZLCouponCell";
 {
     WEAKSELF
     [DCSpeedy dc_callFeedback]; //触动
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ //手动延迟
+    
+    [ZLNetwork POSTWithURL:API_UserCenter parameters:nil callback:^(ZLResponse *responseObject, NSError *error, BOOL isFromCache) {
         [weakSelf.collectionView.mj_header endRefreshing];
-    });
+        
+        if (!responseObject.success && !responseObject) {
+            //数据请求失败
+            return ;
+        }
+        
+        if (responseObject.s == ZLStatusCodeSuccess) {
+            weakSelf.userHome = [ZLUserHome mj_objectWithKeyValues:responseObject.list];
+            [weakSelf.collectionView reloadData];
+        }
+
+           
+        
+    }];
+    
 }
 
 
@@ -134,6 +153,7 @@ static NSString *const ZLCouponCellID = @"ZLCouponCell";
     if (kind == UICollectionElementKindSectionHeader){
         if (indexPath.section == 0) {
             ZLUserHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ZLUserHeaderViewID forIndexPath:indexPath];
+            headerView.headUser = self.userHome;
             reusableview = headerView;
         }
         

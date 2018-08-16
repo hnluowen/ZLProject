@@ -388,7 +388,9 @@ static ResponseReduceBlock _responseReduceBlock;
         [[self allSessionTask] removeObject:task];
         ZLResponse *res = [[ZLResponse alloc] init];
         res.success = [responseObject objectForKey:@"success"];
-        res.s = [[responseObject objectForKey:@"code"] integerValue];
+        if ([responseObject objectForKey:@"code"] != [NSNull null]) {
+            res.s = [[responseObject objectForKey:@"code"] integerValue];
+        }
         res.msg = [NSString stringWithFormat:@"%@-%04ld",[responseObject objectForKey:@"msg"],res.s];
         res.list = [responseObject objectForKey:@"data"];
         callback ? callback(_responseReduceBlock?_responseReduceBlock(task,res):res, nil, NO) : nil;

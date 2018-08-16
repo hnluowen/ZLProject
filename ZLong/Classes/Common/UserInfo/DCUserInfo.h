@@ -10,16 +10,26 @@
 
 @interface DCUserInfo : JKDBModel
 
-@property (nonatomic, copy) NSString *sex;
+@property (nonatomic, copy) NSString *phone;
 
-@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *nick;
 
-@property (nonatomic, copy) NSString *nickname;
+@property (nonatomic, copy) NSString *headurl;
 
-@property (nonatomic, copy) NSString *userimage;
+@property (nonatomic, copy) NSString *uid;
 
-@property (nonatomic, copy) NSString *birthDay;
+@property (nonatomic, copy) NSString *ismember;
 
-@property (nonatomic, copy) NSString *defaultAddress;
+@property (nonatomic, copy) NSString *loginname;
+
+@property (nonatomic, copy) NSString *dlAmount;
+@property (nonatomic, copy) NSString *moneyAmount;
+@property (nonatomic, copy) NSString *lqAmount;
+@property (nonatomic, copy) NSString *xlAmount;
+@property (nonatomic, copy) NSString *outDlMoney;
+
++ (void)saveLoginCookie;
++ (void)clearLoginCookie;
++ (void)readLoginCookie;
 
 @end

@@ -35,6 +35,7 @@
 		B17C4A7C21229F03007EBD9E /* ZLImgStatic.m in Sources */ = {isa = PBXBuildFile; fileRef = B17C4A7B21229F03007EBD9E /* ZLImgStatic.m */; };
 		B17C4A7F21229F21007EBD9E /* ZLCommodity.m in Sources */ = {isa = PBXBuildFile; fileRef = B17C4A7E21229F21007EBD9E /* ZLCommodity.m */; };
 		B17C4A822122A134007EBD9E /* ZLListNews.m in Sources */ = {isa = PBXBuildFile; fileRef = B17C4A812122A134007EBD9E /* ZLListNews.m */; };
+		B1B921D62125346A007E6762 /* ZLUserHome.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B921D52125346A007E6762 /* ZLUserHome.m */; };
 		B1D4015C211A699E0092633C /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D40150211A699E0092633C /* JKDBModel.m */; };
 		B1D4015D211A699E0092633C /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D40151211A699E0092633C /* JKDBHelper.m */; };
 		B1D4015E211A699E0092633C /* DCTitleRolling.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D40157211A699E0092633C /* DCTitleRolling.m */; };
@@ -165,6 +166,8 @@
 		B17C4A7E21229F21007EBD9E /* ZLCommodity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLCommodity.m; sourceTree = "<group>"; };
 		B17C4A802122A134007EBD9E /* ZLListNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLListNews.h; sourceTree = "<group>"; };
 		B17C4A812122A134007EBD9E /* ZLListNews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLListNews.m; sourceTree = "<group>"; };
+		B1B921D42125346A007E6762 /* ZLUserHome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLUserHome.h; sourceTree = "<group>"; };
+		B1B921D52125346A007E6762 /* ZLUserHome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLUserHome.m; sourceTree = "<group>"; };
 		B1D40150211A699E0092633C /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
 		B1D40151211A699E0092633C /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
 		B1D40152211A699E0092633C /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
@@ -678,6 +681,8 @@
 			isa = PBXGroup;
 			children = (
 				CA1D3EFA212019100012690E /* PersonsGrid.plist */,
+				B1B921D42125346A007E6762 /* ZLUserHome.h */,
+				B1B921D52125346A007E6762 /* ZLUserHome.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1018,6 +1023,7 @@
 				B17C4A7C21229F03007EBD9E /* ZLImgStatic.m in Sources */,
 				CAD719D7211696B900752489 /* DCTopLineFootView.m in Sources */,
 				CAC00F482115E01D00005407 /* DCMsgFootView.m in Sources */,
+				B1B921D62125346A007E6762 /* ZLUserHome.m in Sources */,
 				CA0A4A8F212035A3000C0FC7 /* ZLBonusCarCell.m in Sources */,
 				B1D4015D211A699E0092633C /* JKDBHelper.m in Sources */,
 				CAD719EF2116C95A00752489 /* DCLifeShopCell.m in Sources */,

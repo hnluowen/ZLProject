@@ -188,6 +188,10 @@ static NSString *const DCLifeHeadViewID = @"DCLifeHeadView";
         [weakSelf.navigationController pushViewController:appendVC animated:YES];
     };
     _topToolView.searchButtonClickBlock = ^{
+        NSString *goURL = [NSString stringWithFormat:@"%@%@",BASEURL,@"search"];
+        TOWebViewController *webViewController = [[TOWebViewController alloc] initWithURLString:goURL];
+        [weakSelf.navigationController pushViewController:webViewController animated:YES];
+
         NSLog(@"点击了首页搜索");
     };
     [self.view addSubview:_topToolView];
@@ -362,10 +366,47 @@ static NSString *const DCLifeHeadViewID = @"DCLifeHeadView";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {//10
+    NSString *goURL = @"";
+    if (indexPath.section == 0) {//8
+        NSLog(@"点击了8个属性第%zd",indexPath.row);
+        DCGridItem *item = [_gridItem objectAtIndex:indexPath.row];
+        if (item.jumpURL.length == 0) {
+            [MBProgressHUD showError:@"暂未开放，敬请期待！"];
+            return;
+        }
+        goURL = [NSString stringWithFormat:@"%@%@",BASEURL,item.jumpURL];
+
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_LqArea_URL];
+        } else if (indexPath.row == 1) {
+            goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_NewProduct_URL];
+        } else if (indexPath.row == 2) {
+            goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_ZLXX_URL];
+        } else if (indexPath.row == 3) {
+            goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_TTTH_URL];
+        }
+
+    } else if (indexPath.section == 2) {
+        goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_GoHot_URL];
         
-        NSLog(@"点击了10个属性第%zd",indexPath.row);
+    } else if (indexPath.section == 3) {
+        if (indexPath.row == 0) {
+            goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_GoHot_URL];
+        } else if (indexPath.row == 1) {
+            goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_GoExpress_URL];
+        } else if (indexPath.row == 2) {
+            goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_GoTravel_URL];
+
+        } else if (indexPath.row == 3) {
+            goURL = [NSString stringWithFormat:@"%@%@",BASEURL,JUMP_GoRecharge_URL];
+        }
     }
+    TOWebViewController *web = [[TOWebViewController alloc] initWithURLString:goURL];
+    [self.navigationController pushViewController:web animated:YES];
+
+    
+    
 }
 
 #pragma mark - <UIScrollViewDelegate>
