@@ -67,7 +67,7 @@ static NSString *const ZLBonusCarHeaderViewID = @"ZLBonusCarHeaderView";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) {
-        return 2;
+        return 1;
     }
 //    } else if (section == 1) {
 //        return 1;
@@ -114,7 +114,7 @@ static NSString *const ZLBonusCarHeaderViewID = @"ZLBonusCarHeaderView";
 #pragma mark - item宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return CGSizeMake(ScreenW , 127);
+        return CGSizeMake(ScreenW , 264);
     }
     return CGSizeZero;
 }
@@ -132,9 +132,9 @@ static NSString *const ZLBonusCarHeaderViewID = @"ZLBonusCarHeaderView";
 
 #pragma mark - in间距
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    if (section == 1 ) {
-        return UIEdgeInsetsMake(10, 0, 10, 0);
-    }
+//    if (section == 1 ) {
+//        return UIEdgeInsetsMake(10, 0, 10, 0);
+//    }
     return UIEdgeInsetsZero;
 }
 
@@ -145,9 +145,9 @@ static NSString *const ZLBonusCarHeaderViewID = @"ZLBonusCarHeaderView";
 }
 #pragma mark - Y间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    if (section == 0 ) {
-        return 10.0f;
-    }
+//    if (section == 0 ) {
+//        return 10.0f;
+//    }
     return 0;
 }
 

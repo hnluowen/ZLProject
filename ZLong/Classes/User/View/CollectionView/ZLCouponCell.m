@@ -24,4 +24,27 @@
     // Initialization code
 }
 
+- (void)setType:(NSInteger)type {
+    _type = type;
+    if (type == 0) {
+        _bigTitleLabel.text = @"虾券";
+        _statusLabel.text = @"已消费";
+        _couponBg.image = [UIImage imageNamed:@"p_4"];
+
+    } else if (type == 1) {
+        _bigTitleLabel.text = @"生虾";
+        _statusLabel.text = @"已消费";
+
+        _couponBg.image = [UIImage imageNamed:@"p_4"];
+
+    } else if (type == 2) {
+        _bigTitleLabel.text = @"生虾";
+        _statusLabel.text = @"已体现";
+        _couponBg.image = [UIImage imageNamed:@"p_3"];
+        
+    }
+    _priceLabel.text = [NSString stringWithFormat:@"%.2f",[self.showNum floatValue]];
+
+}
+
 @end

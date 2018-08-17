@@ -34,8 +34,16 @@
     _headImageView.layer.cornerRadius = _headImageView.frame.size.width/2.0;
     _headImageView.layer.masksToBounds = YES;
     
+    _carBageBtn.hidden = [headUser.cardNum integerValue] > 0 ? NO : YES;
+    _orderBageBtn.hidden = [headUser.orderNum integerValue] > 0 ? NO : YES;
+    _scBageBtn.hidden = [headUser.favoriteNum integerValue] > 0 ? NO : YES;
+    _bagBageBtn.hidden = [headUser.couponsNum integerValue] > 0 ? NO : YES;
+
     [_carBageBtn setTitle:[NSString stringWithFormat:@"%@",headUser.cardNum] forState: UIControlStateNormal];
-    
+    [_orderBageBtn setTitle:[NSString stringWithFormat:@"%@",headUser.orderNum] forState: UIControlStateNormal];
+    [_scBageBtn setTitle:[NSString stringWithFormat:@"%@",headUser.favoriteNum] forState: UIControlStateNormal];
+    [_bagBageBtn setTitle:[NSString stringWithFormat:@"%@",headUser.couponsNum] forState: UIControlStateNormal];
+
 }
 
 

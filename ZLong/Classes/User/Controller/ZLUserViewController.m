@@ -140,6 +140,15 @@ static NSString *const ZLCouponCellID = @"ZLCouponCell";
         
     } else if (indexPath.section == 1) {
         ZLCouponCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ZLCouponCellID forIndexPath:indexPath];
+        if (indexPath.row == 0) {
+            cell.showNum = _userHome.userInfo.lqAmount;
+        } else if (indexPath.row == 1) {
+            cell.showNum = _userHome.userInfo.dlAmount;
+        } else if (indexPath.row == 2) {
+            cell.showNum = _userHome.userInfo.outDlMoney;
+        }
+        
+        cell.type = indexPath.row;
         gridcell = cell;
     }
 

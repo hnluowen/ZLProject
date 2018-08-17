@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 
 @property (nonatomic,strong) ZLUserHome *headUser;
+
 @property (weak, nonatomic) IBOutlet UILabel *nickLabel;
 @property (weak, nonatomic) IBOutlet UILabel *loginNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *shopCarButton;
