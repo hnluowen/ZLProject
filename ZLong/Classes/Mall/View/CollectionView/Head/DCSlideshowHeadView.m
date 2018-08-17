@@ -67,14 +67,14 @@
     }
     _sigleImage = sigleImage;
     
-    [_bottomAdImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASEURL_IMG,_sigleImage.imgUrl]]];
+    [_bottomAdImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASEURL_IMG,_sigleImage.imgUrl]] placeholderImage:[UIImage imageNamed:@"default"]];
 
 }
 
 - (void)setImageGroupArray:(NSArray *)imageGroupArray
 {
     _imageGroupArray = imageGroupArray;
-    _cycleScrollView.placeholderImage = [UIImage imageNamed:@"default_160"];
+    _cycleScrollView.placeholderImage = [UIImage imageNamed:@"default"];
     if (imageGroupArray.count == 0) return;
     NSMutableArray *imageURLArray = [NSMutableArray arrayWithCapacity:100];
     for (ZLImgStatic *imgStatic in _imageGroupArray) {

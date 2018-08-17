@@ -20,5 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *orderButton;
 @property (weak, nonatomic) IBOutlet UIButton *collectionButton;
 @property (weak, nonatomic) IBOutlet UIButton *carBagButton;
+@property (weak, nonatomic) IBOutlet UIButton *carBageBtn;
+@property (weak, nonatomic) IBOutlet UIButton *orderBageBtn;
+@property (weak, nonatomic) IBOutlet UIButton *scBageBtn;
+@property (weak, nonatomic) IBOutlet UIButton *bagBageBtn;
 
 @end
