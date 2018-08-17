@@ -33,21 +33,22 @@
     [_headImageView sd_setImageWithURL:[NSURL URLWithString:headUser.userInfo.headurl] placeholderImage:nil];
     _headImageView.layer.cornerRadius = _headImageView.frame.size.width/2.0;
     _headImageView.layer.masksToBounds = YES;
-    _shopCarButton.badgeValue = headUser.cardNum;
-    _orderButton.badgeValue = headUser.orderNum;
-    _collectionButton.badgeValue = headUser.favoriteNum;
-    _carBagButton.badgeValue = headUser.couponsNum;
+//    [self setUpBaseBageButtons:@[_shopCarButton,_orderButton,_collectionButton,_carBagButton]];
+//
+//    _shopCarButton.badgeValue = headUser.cardNum;
+//    _orderButton.badgeValue = headUser.orderNum;
+//    _collectionButton.badgeValue = headUser.favoriteNum;
+//    _carBagButton.badgeValue = headUser.couponsNum;
     
-    [self setUpBaseBageButtons:@[_shopCarButton,_orderButton,_collectionButton,_carBagButton]];
 }
 
 - (void)setUpBaseBageButtons:(NSArray *)btnArray {
     for (UIButton *button in btnArray) {
-        button.badgeBGColor = [UIColor clearColor];
-        button.shouldHideBadgeAtZero = YES;
+        button.badgeBGColor = [UIColor dc_colorWithHexString:@"#f23023"];
         button.badgeTextColor = [UIColor dc_colorWithHexString:@"#f23023"];
+//        button.shouldAnimateBadge = YES;
+        button.shouldHideBadgeAtZero = YES;
         button.badgeOriginY = -9;
-//        button.badgeFont = [UIFont systemFontOfSize:9];
     }
 }
 - (IBAction)clickEdit:(UIButton *)sender {
