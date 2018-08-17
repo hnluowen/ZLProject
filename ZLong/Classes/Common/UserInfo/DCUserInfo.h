@@ -22,11 +22,10 @@
 
 @property (nonatomic, copy) NSString *loginname;
 
-@property (nonatomic, copy) NSString *dlAmount;
+@property (nonatomic, copy) NSString *dlAmount; //已消费生虾
 @property (nonatomic, copy) NSString *moneyAmount;
-@property (nonatomic, copy) NSString *lqAmount;
-@property (nonatomic, copy) NSString *xlAmount;
-@property (nonatomic, copy) NSString *outDlMoney;
+@property (nonatomic, copy) NSString *lqAmount; //已消费虾券
+@property (nonatomic, copy) NSString *outDlMoney; //以提现生虾
 
 + (void)saveLoginCookie;
 + (void)clearLoginCookie;

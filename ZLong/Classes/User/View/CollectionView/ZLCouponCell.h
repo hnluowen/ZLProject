@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ZLCouponCell : UICollectionViewCell
-
+@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, strong) NSString *showNum;
 @end

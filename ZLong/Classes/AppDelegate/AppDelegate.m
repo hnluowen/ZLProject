@@ -31,7 +31,7 @@
     [self.window makeKeyAndVisible];
 //    [ZLAPITest testAPIUser];
 //    [ZLAPITest testAPILogin];
-//    [ZLAPITest testAPIBonus];
+    [ZLAPITest testAPIBonus];
 //    [ZLAPITest testAPIHome];
 //    NSString *path = NSHomeDirectory();//主目录
 //    NSLog(@"NSHomeDirectory:%@",path);

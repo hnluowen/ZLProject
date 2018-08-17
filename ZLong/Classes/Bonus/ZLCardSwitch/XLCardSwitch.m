@@ -9,7 +9,8 @@
 #import "XLCardSwitch.h"
 #import "XLCardSwitchFlowLayout.h"
 #import "ZLBonusCarCell.h"
-
+#import "ZLBonusLqCell.h"
+#import "ZLBonusXlCell.h"
 @interface XLCardSwitch ()<UICollectionViewDelegate,UICollectionViewDataSource> {
     UICollectionView *_collectionView;
     
@@ -45,6 +46,9 @@
     _collectionView.dataSource = self;
     
     [_collectionView registerNib:[UINib nibWithNibName:@"ZLBonusCarCell" bundle:nil] forCellWithReuseIdentifier:@"ZLBonusCarCell"];
+    [_collectionView registerNib:[UINib nibWithNibName:@"ZLBonusLqCell" bundle:nil] forCellWithReuseIdentifier:@"ZLBonusLqCell"];
+    [_collectionView registerNib:[UINib nibWithNibName:@"ZLBonusXlCell" bundle:nil] forCellWithReuseIdentifier:@"ZLBonusXlCell"];
+
     [self addSubview:_collectionView];
 }
 
@@ -131,8 +135,22 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ZLBonusCarCell *card = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZLBonusCarCell" forIndexPath:indexPath];
-    return  card;
+    UICollectionViewCell *cell = nil;
+    if (indexPath.row == 0) {
+
+        ZLBonusCarCell *card = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZLBonusCarCell" forIndexPath:indexPath];
+        cell = card;
+    } else if (indexPath.row == 1) {
+        ZLBonusXlCell *card = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZLBonusXlCell" forIndexPath:indexPath];
+
+        cell = card;
+
+    } else {
+        ZLBonusLqCell *card = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZLBonusLqCell" forIndexPath:indexPath];
+        cell = card;
+
+    }
+    return  cell;
 }
 
 #pragma mark -

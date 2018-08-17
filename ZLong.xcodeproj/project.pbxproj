@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A7DC29AD68E6A0C2C96F388A /* libPods-ZLong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4CAC5EFE04B6F1495BAC3C /* libPods-ZLong.a */; };
+		B155FCB72126954900E5791E /* ZLBonusLqCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B155FCB52126954900E5791E /* ZLBonusLqCell.m */; };
+		B155FCB82126954900E5791E /* ZLBonusLqCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B155FCB62126954900E5791E /* ZLBonusLqCell.xib */; };
+		B155FCBC2126956D00E5791E /* ZLBonusXlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B155FCBA2126956D00E5791E /* ZLBonusXlCell.m */; };
+		B155FCBD2126956D00E5791E /* ZLBonusXlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B155FCBB2126956D00E5791E /* ZLBonusXlCell.xib */; };
 		B15B7DFA211D2A4F00CE122F /* TOWebViewControllerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B15B7DDF211D2A4E00CE122F /* TOWebViewControllerLocalizable.strings */; };
 		B15B7DFB211D2A4F00CE122F /* TOActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = B15B7DE6211D2A4E00CE122F /* TOActivitySafari.m */; };
 		B15B7DFC211D2A4F00CE122F /* UIImage+TOWebViewControllerIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = B15B7DE7211D2A4E00CE122F /* UIImage+TOWebViewControllerIcons.m */; };
@@ -108,6 +112,12 @@
 		1A4CAC5EFE04B6F1495BAC3C /* libPods-ZLong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZLong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A660FE1DA7D2C5AF3DC66DA /* Pods-ZLong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLong.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLong/Pods-ZLong.release.xcconfig"; sourceTree = "<group>"; };
 		886A40FD737D1E44917EEFDB /* Pods-ZLong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZLong/Pods-ZLong.debug.xcconfig"; sourceTree = "<group>"; };
+		B155FCB42126954900E5791E /* ZLBonusLqCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLBonusLqCell.h; sourceTree = "<group>"; };
+		B155FCB52126954900E5791E /* ZLBonusLqCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLBonusLqCell.m; sourceTree = "<group>"; };
+		B155FCB62126954900E5791E /* ZLBonusLqCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLBonusLqCell.xib; sourceTree = "<group>"; };
+		B155FCB92126956D00E5791E /* ZLBonusXlCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLBonusXlCell.h; sourceTree = "<group>"; };
+		B155FCBA2126956D00E5791E /* ZLBonusXlCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLBonusXlCell.m; sourceTree = "<group>"; };
+		B155FCBB2126956D00E5791E /* ZLBonusXlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLBonusXlCell.xib; sourceTree = "<group>"; };
 		B15B7DE0211D2A4E00CE122F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		B15B7DE1211D2A4E00CE122F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOWebViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		B15B7DE2211D2A4E00CE122F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
@@ -432,6 +442,12 @@
 				CA0A4A8C212035A3000C0FC7 /* ZLBonusCarCell.h */,
 				CA0A4A8D212035A3000C0FC7 /* ZLBonusCarCell.m */,
 				CA0A4A8E212035A3000C0FC7 /* ZLBonusCarCell.xib */,
+				B155FCB42126954900E5791E /* ZLBonusLqCell.h */,
+				B155FCB52126954900E5791E /* ZLBonusLqCell.m */,
+				B155FCB62126954900E5791E /* ZLBonusLqCell.xib */,
+				B155FCB92126956D00E5791E /* ZLBonusXlCell.h */,
+				B155FCBA2126956D00E5791E /* ZLBonusXlCell.m */,
+				B155FCBB2126956D00E5791E /* ZLBonusXlCell.xib */,
 			);
 			path = ZLCardSwitch;
 			sourceTree = "<group>";
@@ -531,8 +547,6 @@
 			isa = PBXGroup;
 			children = (
 				CAB68CEC21153A180024E937 /* Controller */,
-				CAB68CED21153A180024E937 /* Model */,
-				CAB68CEE21153A180024E937 /* View */,
 			);
 			path = Nearby;
 			sourceTree = "<group>";
@@ -703,20 +717,6 @@
 				CAB68D28211552A00024E937 /* ZLNearbyViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		CAB68CED21153A180024E937 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CAB68CEE21153A180024E937 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		CAB68D03211546BC0024E937 /* Category */ = {
@@ -922,6 +922,7 @@
 				CAB68D6D2115A4610024E937 /* GoodsGrid.plist in Resources */,
 				CAD719E12116AF4300752489 /* DCTimeShopHeadView.xib in Resources */,
 				B178233821217FDF0045E8A5 /* MBProgressHUD.bundle in Resources */,
+				B155FCB82126954900E5791E /* ZLBonusLqCell.xib in Resources */,
 				CAD719EB2116C73400752489 /* DCLifeHeadView.xib in Resources */,
 				CA1D3EFB212019100012690E /* PersonsGrid.plist in Resources */,
 				CA0A4A952120394C000C0FC7 /* ZLBonusItemViewCell.xib in Resources */,
@@ -931,6 +932,7 @@
 				CAB68D2A211552A00024E937 /* ZLNearbyViewController.xib in Resources */,
 				CAC00F492115E01D00005407 /* DCMsgFootView.xib in Resources */,
 				CA0A4A90212035A3000C0FC7 /* ZLBonusCarCell.xib in Resources */,
+				B155FCBD2126956D00E5791E /* ZLBonusXlCell.xib in Resources */,
 				B16A85A0211C1F8C0070FAD7 /* ZLAppendViewController.xib in Resources */,
 				B15B7E08211D452B00CE122F /* ZLIMViewController.xib in Resources */,
 				B16A8596211C08660070FAD7 /* Assets.xcassets in Resources */,
@@ -1048,6 +1050,7 @@
 				CAB68BEE211531AB0024E937 /* LLAppversionTool.m in Sources */,
 				CA0A4A7821201EEC000C0FC7 /* ZLCouponCell.m in Sources */,
 				CAB68D6421159D370024E937 /* DCUserInfo.m in Sources */,
+				B155FCB72126954900E5791E /* ZLBonusLqCell.m in Sources */,
 				CAD719E52116BF4800752489 /* DCTimeShopCell.m in Sources */,
 				B178233621217FDF0045E8A5 /* MBProgressHUD.m in Sources */,
 				CAB68D6021159C5B0024E937 /* DCPlaceholderTextView.m in Sources */,
@@ -1062,6 +1065,7 @@
 				CAB68D2D21155AB80024E937 /* UIColor+DCColorChange.m in Sources */,
 				B1D4015E211A699E0092633C /* DCTitleRolling.m in Sources */,
 				CAC00F3C2115D4F400005407 /* DCOverFootView.m in Sources */,
+				B155FCBC2126956D00E5791E /* ZLBonusXlCell.m in Sources */,
 				CA0A4A8B21202CB9000C0FC7 /* ZLBonusCarHeaderView.m in Sources */,
 				B17C4A822122A134007EBD9E /* ZLListNews.m in Sources */,
 				CAB68D5A21159C5B0024E937 /* Foundation+Log.m in Sources */,
@@ -1231,6 +1235,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -1261,6 +1266,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
